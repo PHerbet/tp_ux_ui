@@ -1,0 +1,115 @@
+@font-face {
+    font-family:"eras demi";
+    src: url("C://Users//Tarne Fabien//Desktop//projetUiUx/police//eras-demi-itc.ttf") format("ttf");
+
+    font-family:"gillSansUltraBold";
+    src: url("police/gill-sans-ultra-bold-2.ttf") format("ttf");
+} 
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
+article:nth-child(odd){
+    align-self: flex-start;
+}
+
+article:nth-child(even){
+    align-self: flex-end;
+
+}
+
+
+article{
+    height: 20em;
+    width: 30em;
+    margin: 2em;
+    padding: 1em;
+    border: solid;
+    border-radius:20px 20px;
+    border-color:#0dfb18;
+    box-shadow: 6px 6px 4px lightgreen;
+    background: no-repeat rgb(195, 228, 195);
+
+}
+#menuNavigation{
+    background-image: linear-gradient(rgb(177, 90, 5),rgb(177, 120, 5));
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+#piedDePage{
+    background-color:rgb(5, 171, 177);
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    list-style: none;
+}
+
+#logoSite{
+    width:5em; 
+    height:auto;
+}
+
+h1{
+    color: rgb(177, 90, 5);
+}
+p{
+    color: rgb(177, 120, 5);
+    font-family: eras demi;
+}
+
+@keyframes aDroite {
+    0%{
+        align-self: flex-start;
+    }
+    100%{
+        transform: translateX(20em);
+    }
+    }
+
+    article:nth-child(odd):hover{
+        animation: aDroite 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes aGauche {
+        0%{
+            align-self: flex-end;
+        }
+        100%{
+            transform: translateX(-20em);
+        }
+        }
+    
+        article:nth-child(even):hover{
+            animation: aGauche 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes bounce {
+            from{
+                transform: translateY(0px);
+            }
+        
+            to{
+                transform: translateY(-10px);
+            }
+        }
+
+img:hover{
+    animation: bounce 0.2s infinite alternate;
+
+}
+a:visited{
+    color: lightgreen;
+}
+a{
+    color: #0dfb18;
+}
+
